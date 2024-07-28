@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .checkout-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .checkout-container h2 {
+            margin-bottom: 20px;
+        }
+        .checkout-container img {
+            max-width: 30%;
+            border-radius: 10px;
+        }
+        .product-info {
+            margin: 20px 0;
+        }
+        .product-info h3 {
+            margin: 10px 0 5px 0;
+        }
+        .product-info p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .checkout-container label {
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .checkout-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .checkout-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .checkout-container button:hover {
+            background-color: #218838;
+        }
+        .secure-info {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                console.log('Formulário enviado');
+                window.location.assign('peidei.html');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="checkout-container">
+        <h2>Checkout</h2>
+
+        <!-- Informação do Produto -->
+        <div class="product-info">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbAhdk8VItPj15W9SydG_efhpwRWyp52easZ--yUw33w&s" alt="Produto">
+            <h3>REGEDIT FFH4X FULL CAPA ANT BAN</h3>
+            <p>R$ 30</p>
+        </div>
+
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" required>
+
+            <button type="submit">Comprar</button>
+        </form>
+
+        <!-- Informação de Segurança -->
+        <div class="secure-info">
+            <p>100% seguro. Após o pagamento, os itens comprados serão enviados para o seu email.</p>
+        </div>
+    </div>
+</body>
+</html>
